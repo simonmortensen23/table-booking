@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['table-bookin22.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['table-booking2022.herokuapp.com', 'localhost']
 
 
 # Application definition
