@@ -6,8 +6,15 @@ from cloudinary.models import CloudinaryField
 class Restaurant(models.Model):
     name = models.CharField(max_length=250, default='Restaurant', unique=True)
     description = models.CharField(max_length=250, default='Restaurant')
+    image = CloudinaryField('image', default='Placeholder')
     opening_time = models.IntegerField(default=0)
     closing_time = models.IntegerField(default=0)
+
+    class Meta:
+        ordering = ['-name']
+
+    def __str__(self):
+        return self.name
 
 
 class Table(models.Model):
@@ -22,8 +29,3 @@ class Booking(models.Model):
     booking_date_time_end = models.DateTimeField()
     
 
-class Meta:
-    ordering = ['-title']
-
-def __str__(self):
-    return self.title
