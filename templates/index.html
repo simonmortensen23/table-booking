@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <h1>WELCOME</h1>
+        {% for restaurant in db %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div>
+                        <div>
+                            <h2>{{ restaurant.name }}</h2>
+                        </div>
+                        <div class="image-container">
+                            {% if "placeholder" in restaurant.image.url %}
+                            <img class="card-img-top"
+                                src="https://cofoco-live.imgix.net/190121_scarpetta_6030_lowres.jpg?auto=compress%2Cformat&con=15&crop=focalpoint&fit=crop&fp-x=0.5&fp-y=0.5&h=648&ixlib=php-1.1.0&q=85&sat=0&w=972">
+                            {% else %}
+                            <img class="card-img-top" src=" {{ restaurant.image.url }}">
+                            {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}
