@@ -3,6 +3,10 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 # Create your models here.
 
+class Costumer(models.Model):
+    name = models.CharField(max_length=50, default='Costumer')
+    email = models.EmailField(unique=True)
+
 class Restaurant(models.Model):
     name = models.CharField(max_length=250, default='Restaurant', unique=True)
     description = models.CharField(max_length=250, default='Restaurant')
