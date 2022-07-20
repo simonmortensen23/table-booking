@@ -1,0 +1,9 @@
+body {
+    background-color: aliceblue;
+    color: black;
+}
+
+.card {
+    border: none;
+    background-color: transparent;
+}

@@ -5,5 +5,10 @@ from .models import Restaurant
 
 class RestaurantView(generic.ListView):
     model = Restaurant
-    queryset = Restaurant.objects.all()
+    queryset = Restaurant.objects.order_by('-name')
     template_name = "index.html"
+
+    def index(request):
+        restaurant_list = Restaurant.objects.order_by('-name')
+        context = {'restaurant_list': restaurant_list}
+        return render(request, 'index.html', context)
