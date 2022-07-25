@@ -14,7 +14,7 @@ def view_home(request):
 
 
 @login_required
-def booking(request):
+def make_booking(request):
     """
     Function enables user to make a booking
     and add it to the database.
@@ -33,7 +33,7 @@ def booking(request):
     context = {
         'form': form
         }
-    return render(request, 'booking.html', context)
+    return render(request, 'make_booking.html', context)
 
 
 @login_required
@@ -63,6 +63,8 @@ def edit_booking(request, booking_id):
             booking.user = request.user
             booking.save()
             messages.success(request, 'Your booking has been updated.')
+        else:
+            messages.error(request, 'Booking date must be in the future.')
         return redirect('view_booking')
     form = BookingForm(instance=book)
     context = {

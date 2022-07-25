@@ -6,35 +6,37 @@
 <section class="page-section clearfix">
     <div class="container">
         <div class="intro">
-            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/img/intro-booking.jpg' %}"
-                alt="Restaurant" />
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/img/writing.jpg' %}"
+                alt="Pencil on clean pad" />
             <div class="intro-text left-0 text-center bg-faded p-5 rounded">
                 <h2 class="section-heading mb-4">
-                    <span class="section-heading-upper">Table Booking Form</span>
+                    <span class="section-heading-upper">Edit your booking</span>
+
+
                 </h2>
+
+                <p><a href="{% url 'view_booking' %}">Changed my mind, back to my booking</a></p>
                 <div class="row">
                     <div class="col-md-8 mt-3 offset-md-2">
-                    
-                        <form method="POST" action="{% url 'booking' %}" name="form">
+                        <form method="POST" name="form">
 
-                            {{ form|crispy }}
+                            {{form|crispy}}
 
 
                             {% csrf_token %}
 
 
                             <div class="intro-button mx-auto"><button class="btn btn-primary btn-xl"
-                                    type="submit">Submit Booking</button>
+                                    type="submit">Submit edited booking</button>
                             </div>
-
                         </form>
+
                     </div>
-                    
-                 
                 </div>
             </div>
         </div>
     </div>
-    </div>
 </section>
+
+
 {% endblock content %}

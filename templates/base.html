@@ -47,7 +47,10 @@
                     {% endif %}
                     <li class="nav-item">
                         <button>
-                            <a href="{% url 'booking' %}" class="nav-link">Book Table</a>
+                            <a href="{% url 'make_booking' %}" class="nav-link">Book Table</a>
+                        </button>    
+                        <button>
+                            <a href="{% url 'view_booking' %}" class="nav-link">View Table</a>
                         </button>    
                     </li>
                 </ul>
@@ -59,9 +62,18 @@
     </nav>
 
     <main class="flex-shrink-0 main-bg">
+       
         {% block content %}
         
         {% endblock content %}
+
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
     </main>
 
     <!-- Footer -->
