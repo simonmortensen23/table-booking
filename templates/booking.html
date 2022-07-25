@@ -1,26 +1,40 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
 
-<div class="smart-wrap">
-    <div class="smart-forms smart-container wrap-2">
-     
-      <div class="form-header header-primary">
-        <h4><i class="fa fa-calendar"></i>Make Room Reservations in Minutes</h4>
-      </div>
-       
-      <form method="post" action="/" id="booking-form">
-        <div class="form-body">
-         
-         <!-- OUR FORM ELEMENTS WILL GO HERE -->                                               
-           
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/img/intro-booking.jpg' %}"
+                alt="Restaurant" />
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper">Table Booking Form</span>
+                </h2>
+                <div class="row">
+                    <div class="col-md-8 mt-3 offset-md-2">
+                    
+                        <form method="POST" action="{% url 'booking' %}" name="form">
+
+                            {{ form|crispy }}
+
+
+                            {% csrf_token %}
+
+
+                            <div class="intro-button mx-auto"><button class="btn btn-primary btn-xl"
+                                    type="submit">Submit Booking</button>
+                            </div>
+
+                        </form>
+                    </div>
+                    
+                 
+                </div>
+            </div>
         </div>
-        <div class="form-footer">
-          <button type="submit" class="button btn-primary">Confirm Booking</button>
-          <button type="reset" class="button">Cancel</button>
-        </div>
-         
-      </form>
-       
     </div>
-  </div>
-
+    </div>
+</section>
 {% endblock content %}
