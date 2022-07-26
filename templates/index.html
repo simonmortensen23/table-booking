@@ -2,9 +2,13 @@
 
 {% block content %}
 
-<div class="container-fluid">
-    <div class="row">
-        <h1>WELCOME</h1>
+<div class="container-fluid home">
+    <div class="home-image">
+        <h1>Welcome</h1>
+        <button>
+            <a href="{% url 'make_booking' %}" class="nav-link">Book Table</a>
+            <a href="{% url 'menu' %}" class="nav-link">Menu</a>
+        </button>
        
     </div>
 </div>

@@ -21,10 +21,11 @@ class BookingForm(ModelForm):
                 years=(datetime.date.today().year, datetime.date.today().year + 1))
         }
 
-    # def __init__(self, *args, **kwargs):
-    #     """
-    #     Add class, required field and DateTime picker
-    #     to third field.
-    #     """
-    #     super().__init__(*args, **kwargs)
-    #     self.fields['phone_number'].widget.attrs['required'] = 'required'
+    def __init__(self, *args, **kwargs):
+        """
+        Add class, required field
+        to third field.
+        """
+        super().__init__(*args, **kwargs)
+        self.fields['phone_number'].widget.attrs['required'] = 'required'
+        self.fields['booking_date_time'].widget.attrs['required'] = 'required'

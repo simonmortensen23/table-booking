@@ -41,7 +41,7 @@
                 </td>
                 <td>
                     <div class="intro-button mx-auto"><a class="btn btn-primary btn-danger btn-xl"
-                            href="/delete/{{ booking.id }}">Delete Booking</a></div>
+                            href="/delete/{{ booking.id }}" onclick="confirmation()">Delete Booking</a></div>
                 </td>
             </tr>
 
@@ -52,4 +52,12 @@
     
     
 </div>
+<script>
+    function confirmation(){
+      var result = confirm("Are you sure to delete?");
+      if(result){
+        messages.success("Deleted")
+      }
+    }
+  </script>
 {% endblock content %}

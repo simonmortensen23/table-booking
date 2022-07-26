@@ -1,0 +1,40 @@
+html, body {
+    background-color: aliceblue;
+    height: 100%;
+    color: black;
+}
+
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+.home-image {
+    background-image: url('/static/images/feedme.jpg');
+    background-size: 100%;
+    height: 100vh;
+    width: 100vw;
+}
+
+.menu-container {
+    max-width: 50%;
+    margin: auto;
+}
+
+.menu-signature {
+    color: aliceblue;
+    box-sizing: border-box;
+    width: 100%;
+    flex: auto;
+    background-color: #02182d;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+
+footer {
+    background-color: darkblue;
+    color: white;
+}

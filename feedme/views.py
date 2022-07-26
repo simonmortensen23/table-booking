@@ -12,7 +12,11 @@ def view_home(request):
     """
     return render(request, 'index.html')
 
-
+def view_menu(request):
+    """
+    Function enables user to view menu page.
+    """
+    return render(request, 'menu.html')
 @login_required
 def make_booking(request):
     """
@@ -80,14 +84,7 @@ def delete_booking(request, booking_id):
     it has been made and added to the database.
     """
     booking = get_object_or_404(Booking, id=booking_id)
-    if request.method == "POST":
-        form = BookingForm(request.POST, instance=booking)
-        if booking.delete():
-            messages.success(request, 'Your booking has been deleted.')
-            return redirect('view_booking')
+    booking.delete()    
+    messages.success(request, 'Your booking has been deleted.')
+    return redirect('view_booking')
 
-    form = BookingForm(instance=booking)
-    context = {
-        'form': form
-    }
-    return render(request, 'delete_booking.html', context)
