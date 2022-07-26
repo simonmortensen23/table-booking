@@ -1,18 +1,18 @@
 import datetime
 from django import forms
 from django.forms import ModelForm, TextInput, SelectDateWidget
-from tempus_dominus.widgets import DateTimePicker
+
 from feedme.models import Booking
 
 
-class BookingForm(ModelForm):
+class BookingForm(forms.ModelForm):
     """
     Control booking creation here.
     """
-
+    
     class Meta:
         model = Booking
-        fields = ['customer', 'people', 'phone_number', 'booking_date_time']
+        fields = ['customer', 'people', 'phone_number', 'booking_date_time', 'booking_time']
 
         widgets = {
             'customer': TextInput(),
@@ -31,9 +31,6 @@ class BookingForm(ModelForm):
         self.fields['people'].widget.attrs['class'] = 'booking-form-fields'
         self.fields['phone_number'].widget.attrs['class'] = 'booking-form-fields'
         self.fields['booking_date_time'].widget.attrs['class'] = 'booking-form-fields'
-        
-        # self.fields['booking_date_time'].widget.attrs['class'] = 'datetimepicker-input'
-        # self.fields['booking_date_time'].widget = DateTimePicker()
         self.fields['phone_number'].widget.attrs['required'] = 'required'
     
         

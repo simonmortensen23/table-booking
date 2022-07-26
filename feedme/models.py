@@ -5,6 +5,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 
 
+
 class Booking(models.Model):
     """
     Class to represent booking model
@@ -15,7 +16,13 @@ class Booking(models.Model):
                              blank=True,
                              on_delete=models.CASCADE)
     customer = models.CharField(max_length=20, null=True)
+    phone_number = models.CharField(null=True, blank=True, max_length=20)
     booking_date_time = models.DateTimeField(null=True)
+    booking_time = models.TimeField(null=True)
+    people = models.PositiveIntegerField(
+                            null=True,
+                            validators=[MinValueValidator(1)])
+    created_on = models.DateTimeField(auto_now_add=True)
     
 
     def validate_date(booking_date_time):
@@ -29,11 +36,7 @@ class Booking(models.Model):
                                 null=True,
                                 blank=True,
                                 validators=[validate_date])                          
-    people = models.PositiveIntegerField(
-                            null=True,
-                            validators=[MinValueValidator(1)])
-    phone_number = models.CharField(null=True, blank=True, max_length=14)
-    created_on = models.DateTimeField(auto_now_add=True)
+    
 
     class Meta:
         """
@@ -53,3 +56,6 @@ class Booking(models.Model):
                    for {self.customer}\
                    for {self.people} customers\
                    for {self.booking_date_time}.'
+
+
+
