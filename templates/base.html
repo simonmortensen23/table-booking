@@ -46,11 +46,11 @@
                     </li>
                     {% endif %}
                     <li class="nav-item">
-                        <button>
-                            <a href="{% url 'make_booking' %}" class="nav-link">Book Table</a>
+                        <button onclick="window.location.href={% url 'make_booking' %};">
+                            Book Table
                         </button>    
-                        <button>
-                            <a href="{% url 'view_booking' %}" class="nav-link">View Table</a>
+                        <button onclick="window.location.href={% url 'view_booking' %};">
+                            View Bookings
                         </button>    
                     </li>
                 </ul>

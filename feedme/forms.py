@@ -29,3 +29,7 @@ class BookingForm(ModelForm):
         super().__init__(*args, **kwargs)
         self.fields['phone_number'].widget.attrs['required'] = 'required'
         self.fields['booking_date_time'].widget.attrs['required'] = 'required'
+        self.fields['customer'].widget.attrs['class'] = 'booking-form-fields'
+        self.fields['people'].widget.attrs['class'] = 'booking-form-fields'
+        self.fields['phone_number'].widget.attrs['class'] = 'booking-form-fields'
+        self.fields['booking_date_time'].widget.attrs['class'] = 'booking-form-fields'

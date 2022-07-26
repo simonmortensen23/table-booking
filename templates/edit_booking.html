@@ -6,7 +6,7 @@
 <section class="page-section clearfix">
     <div class="container">
         <div class="intro">
-            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/img/writing.jpg' %}"
+            <img class="booking-image-fixed col-lg-5 col-xs-12 col-12" src="{% static 'images/feedme.jpg' %}"
                 alt="Pencil on clean pad" />
             <div class="intro-text left-0 text-center bg-faded p-5 rounded">
                 <h2 class="section-heading mb-4">
@@ -18,7 +18,7 @@
                 <p><a href="{% url 'view_booking' %}">Changed my mind, back to my booking</a></p>
                 <div class="row">
                     <div class="col-md-8 mt-3 offset-md-2">
-                        <form method="POST" name="form">
+                        <form method="POST" name="form" class="booking-form">
 
                             {{form|crispy}}
 
