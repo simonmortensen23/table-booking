@@ -20,24 +20,18 @@ button {
     border-color: red;
 }
 
-.nav-link {
-    color: red;
-}
-
-.nav-link:hover {
-    color: green;
-}
-
 .home-image {
     background-image: url('/static/images/feedme.jpg');
     background-size: 100%;
-    height: 100vh;
+    min-height: calc(100vh - 80px);
     width: 100vw;
+    background-size: cover;
+    
 }
 
 .home-intro {
     background-color: rgba(0, 140, 69, 0.5);
-    position: fixed; /* or absolute */
+    position: absolute;
     top: 50%;
     left: 50%;
     height: 40%;
@@ -54,10 +48,11 @@ button {
 .home-intro button {
     color: red;
     font-weight: bold;
-    padding: 30px;
+    padding: 10px;
     display: inline-block;
     align-items: center;
-    margin: 0 40px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .menu-container {
@@ -94,6 +89,10 @@ button {
     bottom: 0;
     right: 0;
    
+}
+
+label {
+    text-align: center;
 }
 
 footer {

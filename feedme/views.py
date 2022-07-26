@@ -6,17 +6,21 @@ from .forms import BookingForm
 
 # Create your views here.
 
+
 def view_home(request):
     """
     Function enables user to view the home page.
     """
     return render(request, 'index.html')
 
+
 def view_menu(request):
     """
     Function enables user to view menu page.
     """
     return render(request, 'menu.html')
+
+
 @login_required
 def make_booking(request):
     """
@@ -84,7 +88,6 @@ def delete_booking(request, booking_id):
     it has been made and added to the database.
     """
     booking = get_object_or_404(Booking, id=booking_id)
-    booking.delete()    
+    booking.delete()
     messages.success(request, 'Your booking has been deleted.')
     return redirect('view_booking')
-

@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'cloudinary_storage',
     'django.contrib.staticfiles',
+    'tempus_dominus',
     'crispy_forms',
     'cloudinary',
     'feedme',

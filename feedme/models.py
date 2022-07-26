@@ -16,6 +16,7 @@ class Booking(models.Model):
                              on_delete=models.CASCADE)
     customer = models.CharField(max_length=20, null=True)
     booking_date_time = models.DateTimeField(null=True)
+    
 
     def validate_date(booking_date_time):
         """
@@ -27,7 +28,7 @@ class Booking(models.Model):
     booking_date_time = models.DateTimeField(
                                 null=True,
                                 blank=True,
-                                validators=[validate_date])
+                                validators=[validate_date])                          
     people = models.PositiveIntegerField(
                             null=True,
                             validators=[MinValueValidator(1)])
