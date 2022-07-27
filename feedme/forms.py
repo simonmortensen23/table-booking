@@ -12,13 +12,16 @@ class BookingForm(forms.ModelForm):
     
     class Meta:
         model = Booking
+        
         fields = ['customer', 'people', 'phone_number', 'booking_date_time', 'booking_time']
 
         widgets = {
             'customer': TextInput(),
             'booking_date_time': SelectDateWidget(
                 years=(datetime.date.today().year, datetime.date.today().year
-                        + 1))
+                        + 1)),
+            'booking_time': forms.TimeInput(attrs={'type': 'time'})           
+                        
         }
 
     def __init__(self, *args, **kwargs):
