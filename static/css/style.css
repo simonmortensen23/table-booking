@@ -1,7 +1,12 @@
 html, body {
-    background-color: aliceblue;
+    background-color: rgb(250, 249, 246);
     height: 100%;
-    color: black;
+    color: rgb(6, 4, 3);
+}
+
+nav {
+    background-color: rgb(250, 249, 246);
+    color: rgb(6, 4, 3);
 }
 
 h1 {
@@ -15,22 +20,22 @@ h1 {
 }
 
 button {
-    background-color: aliceblue;
-    
-    border-color: red;
+    background-color: rgb(145,91,65);
+    color: rgb(250, 249, 246);
+    border-color: rgba(145,91,65, 0.5)
 }
 
 .home-image {
     background-image: url('/static/images/feedme.jpg');
     background-size: 100%;
     min-height: calc(100vh - 80px);
-    width: 100vw;
+    width: 100%;
     background-size: cover;
     
 }
 
 .home-intro {
-    background-color: rgba(0, 140, 69, 0.5);
+    background-color: rgba(250, 249, 246, 0.9);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -41,18 +46,22 @@ button {
 }
 
 .home-intro-text {
-    height: 75%;
+    height: 60%;
     padding: 50px;
 }
 
 .home-intro button {
-    color: red;
     font-weight: bold;
-    padding: 10px;
+    padding: 30px;
     display: inline-block;
     align-items: center;
     margin-left: 5%;
     margin-right: 5%;
+}
+
+.about {
+    text-align: center;
+    margin-top: 20px;
 }
 
 .menu-container {
@@ -73,7 +82,7 @@ button {
 }
 
 .booking-form {
-    background-color: rgba(0, 140, 69, 0.5);
+    background-color: rgba(250, 249, 246, 0.5);
     padding: 10px;
 }
 
@@ -96,6 +105,22 @@ label {
 }
 
 footer {
-    background-color: darkblue;
-    color: white;
+    background-color: rgb(250, 249, 246);
+    color: rgb(6, 4, 3);
+    
+}
+
+.messages {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+    transition: visibility 0s, opacity 250ms, transform 250ms;
+}
+.messages.hide {
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px); // translateX, translateY, translateZ works well
+    transition: visibility 0s 250ms, opacity 250ms, transform 250ms;
 }

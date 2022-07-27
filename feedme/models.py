@@ -3,6 +3,7 @@ from django.core.exceptions import ValidationError
 from django.core.validators import MinValueValidator
 from django.utils import timezone
 from django.contrib.auth.models import User
+import datetime
 
 
 
@@ -17,7 +18,7 @@ class Booking(models.Model):
                              on_delete=models.CASCADE)
     customer = models.CharField(max_length=20, null=True)
     phone_number = models.CharField(null=True, blank=True, max_length=20)
-    booking_date_time = models.DateTimeField(null=True)
+    booking_date = models.DateTimeField(null=True)
     booking_time = models.TimeField(null=True)
     people = models.PositiveIntegerField(
                             null=True,
@@ -25,14 +26,14 @@ class Booking(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     
 
-    def validate_date(booking_date_time):
+    def validate_date(booking_date):
         """
         Function to validate date so that
         booking date is not in the past.
         """
-        if booking_date_time < timezone.now():
+        if booking_date < timezone.now():
             raise ValidationError("Date cannot be in the past")
-    booking_date_time = models.DateTimeField(
+    booking_date = models.DateTimeField(
                                 null=True,
                                 blank=True,
                                 validators=[validate_date])                          
@@ -44,7 +45,7 @@ class Booking(models.Model):
         attached to the model.
         """
         unique_together = ('user', 'customer',
-                           'booking_date_time')
+                           'booking_date')
         ordering = ["-created_on"]
 
     def __str__(self):
@@ -55,7 +56,7 @@ class Booking(models.Model):
         return f' User {self.user} has made a booking \
                    for {self.customer}\
                    for {self.people} customers\
-                   for {self.booking_date_time}.'
+                   for {self.booking_date}.'
 
 
 
