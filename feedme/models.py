@@ -53,10 +53,7 @@ class Booking(models.Model):
         Function to return object model
         items as string.
         """
-        return f' User {self.user} has made a booking \
-                   for {self.customer}\
-                   for {self.people} customers\
-                   for {self.booking_date}.'
+        return f'{self.customer} has made a booking for {self.people} customers for {self.booking_date}.'
 
 
 

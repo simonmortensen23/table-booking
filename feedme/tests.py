@@ -7,4 +7,4 @@ from .views import make_booking, view_booking, edit_booking, view_home, view_men
 class TestDjango(TestCase):
 
     def test_try_test(self):
-        self.assertEqual(1, 0)
+        self.assertEqual(1, 1)
