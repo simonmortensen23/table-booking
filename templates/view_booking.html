@@ -8,48 +8,62 @@
 
 <div class="table-responsive-sm">
     <table class="table table-hover table-dark">
-        <thead>
-            <tr>
-                <th scope="col"></th>
-                <th scope="col">Logged in User</th>
-                <th scope="col">Booking id</th>
-                <th scope="col">Customer name</th>
-                <th scope="col">Reservation date and time</th>
-                <th scope="col">Reservation time</th>
-                <th scope="col">Phone number</th>
-                <th scope="col">Number of guests</th>
-                <th scope="col">Booking Registered</th>
-                <th scope="col">Edit booking</th>
-                <th scope="col">Delete booking</th>
-            </tr>
-        </thead>
-        <tbody>
+        <h1>View Bookings</h1>
+        <h2 class="text-center">made by <i>{{ user.username }}</i></h2>
+        
             {% for booking in bookings %}
 
-            <tr>
-                <th scope="row"></th>
-                <td>{{ user.username }}</td>
-                <td>{{ booking.id }}</td>
-                <td>{{ booking.customer }}</td>
-                <td>{{ booking.booking_date_time }}</td>
-                <td>{{ booking.booking_time }}</td>
-                <td>{{ booking.phone_number }}</td>
-                <td>{{ booking.people}}</td>
-                <td>{{ booking.created_on}}</td>
-                <td>
-                    <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl"
+            <div class="card">
+                    <div class="card-header">
+                    Booking {{ booking.id }} by {{ booking.customer }}
+                    <div class="float-right">
+                        <div class="button"><a class="btn btn-primary btn-xl"
                             href="/edit/{{ booking.id }}">Edit
-                            Booking</a></div>
-                </td>
-                <td>
-                    <div class="intro-button mx-auto"><a class="btn btn-primary btn-danger btn-xl"
-                            href="/delete/{{ booking.id }}" onclick="confirmation()">Delete Booking</a></div>
-                </td>
-            </tr>
+                            Booking</a>
+                        </div>
+                            <button type="button" class="btn btn-danger btn-xl" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Delete Booking
+                            </button>   
+                    </div>                    
+                    </div>
 
-        </tbody>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Delete Booking</h5>
+          <button type="button" class="close" data-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete your booking?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Close</button>
+          <a class="btn btn-primary btn-danger btn-xl"
+                                    href="/delete/{{ booking.id }}"type="submit">Delete Booking</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+                    <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>Booking for {{ booking.people }} person(s) the {{ booking.booking_date.date}} at {{ booking.booking_time }} by {{ booking.customer }}</p>
+                        <footer class="blockquote-footer">Booking created: {{ booking.created_on }}<cite title="Source Title">Source Title</cite></footer>
+                    </blockquote>
+                    </div>
+                    <br>
+              </div>
+            
         {% endfor %}
         {% csrf_token %}
+        
     </table>
     
     
@@ -58,7 +72,9 @@
     function confirmation(){
       var result = confirm("Are you sure to delete?");
       if(result){
-        messages.success("Deleted")
+        alert("Deleted")
+      } else {
+        alert('Action cancelled')
       }
     }
   </script>

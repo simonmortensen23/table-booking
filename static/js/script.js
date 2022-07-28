@@ -1,4 +1,5 @@
-var m = document.getElementsByClassName("messages");  // Return an array
+
+var m = document.getElementsByClassName("alert");  // Return an array
 
 setTimeout(function(){
    if (m && m.length) {
