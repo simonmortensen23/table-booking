@@ -8,6 +8,22 @@
 
 -  **User Stories**
 
+## Layout
+
+## Features
+
+## Technologies Used
+
+## Testing
+
+## Booking Form Validation
+
+## Deployment
+
+## Credits
+
+
+
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
