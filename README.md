@@ -26,30 +26,28 @@ Site admins have full access to all bookings and all CRUD functionalities.
 ### Frameworks, Libraries & Programs Used
 - Django:
   - The Python-based Django framework was used to set up the structure, functionalities, data model and database of the website.
-Bootstrap 5.1.3:
-Bootstrap was used to assist with the responsiveness and styling of the website.
-Google Fonts:
-Raleway and Lora are the main fonts used, Raleway for label titles and Lora for body text.
-Font Awesome:
-Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
-jQuery:
-jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript. It is also used for the Bootstrap Tempus Dominus datetime picker.
-Javascript:
-Javascript was used to define visibility duration for popup messages that signal successful completion of different form related activities.
-Git:
-Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
-GitHub:
-GitHub is used to store the projects code after being pushed from Git.
-Balsamiq:
-Balsamiq was used to create the wireframes during the design process. Wireframes
-Lucidchart:
-Lucidchart was used to create the data model of the project . View Booking data model
-SQLite3 database:
-SQLite3 is Django's default database system.
-Cloudinary:
-I used cloudinary for cloud-based storage and partly for linking of my website images.
-Heroku:
-Heroku is used for the deployment and ultimate cloud-based storage of my application.
+- Bootstrap 5.1.3:
+  - Bootstrap was used to assist with the responsiveness and styling of the website.
+- Google Fonts:
+  - Raleway and Lora are the main fonts used, Raleway for label titles and Lora for body text.
+- Font Awesome:
+  - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.- 
+- jQuery:
+  - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
+- Javascript:
+  - Javascript was used to define visibility duration for popup messages that signal successful completion of different form related activities.
+- Git:
+  - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+- GitHub:
+  - GitHub is used to store the projects code after being pushed from Git.
+- Postgress database:
+  - Database used for heroku
+- SQLite3 database:
+  - SQLite3 is Django's default database system.
+- Cloudinary:
+  - I used cloudinary for cloud-based storage and partly for linking of my website images.
+- Heroku:
+  - Heroku is used for the deployment and ultimate cloud-based storage of my application.
 
 ## Testing
 
