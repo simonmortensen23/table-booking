@@ -30,6 +30,7 @@ Site admins have full access to all bookings and all CRUD functionalities.
 - HTML5
 - CSS3
 - Python
+- Javascript
 
 ### Frameworks, Libraries & Programs Used
 - Django:
@@ -49,9 +50,9 @@ Site admins have full access to all bookings and all CRUD functionalities.
 - GitHub:
   - GitHub is used to store the projects code after being pushed from Git.
 - Postgress database:
-  - Database used for heroku
+  - Database used for production.
 - SQLite3 database:
-  - SQLite3 is Django's default database system.
+  - SQLite3 is Django's default database system, used during development.
 - Cloudinary:
   - I used cloudinary for cloud-based storage and partly for linking of my website images.
 - Heroku:
