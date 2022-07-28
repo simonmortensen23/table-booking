@@ -38,9 +38,7 @@
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     <li>
-                        <button onclick="window.location.href={% url 'view_booking' %};">
-                            View Bookings
-                        </button>  
+                        <a class="nav-link" href="{% url 'view_booking' %}">View Booking</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
@@ -52,9 +50,10 @@
                     
                     {% endif %}
                     <li class="nav-item">
-                        <button onclick="window.location.href={% url 'make_booking' %};">
-                            Book Table
-                        </button>    
+                        <a class="nav-link" href="{% url 'make_booking' %}">Make Booking</a>    
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'menu' %}">Menu</a>    
                     </li>
                 </ul>
                 <span class="navbar-text text-muted">
