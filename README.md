@@ -11,6 +11,7 @@ Site admins have full access to all bookings and all CRUD functionalities.
 ## UX
 
 -  **User Stories**
+1- https://github.com/simonmortensen23/table-booking/projects/1#card-84321010
 
 ## Layout
 
