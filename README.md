@@ -11,7 +11,14 @@ Site admins have full access to all bookings and all CRUD functionalities.
 ## UX
 
 **User Stories**
-1. [Edit Booking](https://github.com/simonmortensen23/table-booking/projects/1#card-84321010)
+1. [Register Account](https://github.com/simonmortensen23/table-booking/projects/1#card-84321005)
+2. [Reset Password](https://github.com/simonmortensen23/table-booking/projects/1#card-84321007)
+3. [Make Booking](https://github.com/simonmortensen23/table-booking/projects/1#card-84321014) 
+4. [Edit Booking](https://github.com/simonmortensen23/table-booking/projects/1#card-84321010)  
+5. [Cancel Booking](https://github.com/simonmortensen23/table-booking/projects/1#card-84321015)   
+6. [View Booking History](https://github.com/simonmortensen23/table-booking/projects/1#card-84367895)
+7. [Redirect to login page](https://github.com/simonmortensen23/table-booking/projects/1#card-84321009)    
+       
 
 ## Layout
 
