@@ -4,11 +4,9 @@
 {% load crispy_forms_tags %}
 
 <section class="page-section clearfix">
-    <div class="container">
-        <div class="intro">
-            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src=""
-                alt="Restaurant" />
-            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+    <div class="container-fluid booking-image">
+        <div class="">
+            <div class="left-0 text-center bg-faded p-5 rounded booking-form">
                 <h2 class="section-heading mb-4">
                     <span class="section-heading-upper">Table Booking Form</span>
                 </h2>
@@ -23,7 +21,7 @@
                             {% csrf_token %}
 
 
-                            <div class="intro-button mx-auto"><button class="btn btn-primary btn-xl"
+                            <div class=""><button class="btn-xl"
                                     type="submit">Submit Booking</button>
                             </div>
                            

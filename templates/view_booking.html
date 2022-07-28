@@ -16,14 +16,14 @@
             <div class="card">
                     <div class="card-header">
                     Booking {{ booking.id }} by {{ booking.customer }}
-                    <div class="float-right">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                         <div class="button"><a class="btn btn-primary btn-xl"
                             href="/edit/{{ booking.id }}">Edit
                             Booking</a>
                         </div>
-                            <button type="button" class="btn btn-danger btn-xl" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <a type="button" class="btn btn-danger btn-xl" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 Delete Booking
-                            </button>   
+                            </a>   
                     </div>                    
                     </div>
 
@@ -55,7 +55,7 @@
                     <div class="card-body">
                     <blockquote class="blockquote mb-0">
                         <p>Booking for {{ booking.people }} person(s) the {{ booking.booking_date.date}} at {{ booking.booking_time }} by {{ booking.customer }}</p>
-                        <footer class="blockquote-footer">Booking created: {{ booking.created_on }}<cite title="Source Title">Source Title</cite></footer>
+                        <footer class="blockquote-footer">Booking created: {{ booking.created_on }}</footer>
                     </blockquote>
                     </div>
                     <br>

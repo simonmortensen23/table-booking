@@ -2,6 +2,8 @@ html, body {
     background-color: rgb(250, 249, 246);
     height: 100%;
     color: rgb(6, 4, 3);
+    font-size: calc(12px + 0.390625vw);
+    
 }
 
 nav {
@@ -10,7 +12,7 @@ nav {
 }
 
 h1 {
-    font-size: 300%;
+    font-size: 1.8rem;
     text-align: center;
 }
 
@@ -39,10 +41,9 @@ button {
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 40%;
-    width: 25%;
     transform: translate(-50%, -50%);
     text-align: center;
+    padding-bottom: 40px;
 }
 
 .home-intro-text {
@@ -50,24 +51,16 @@ button {
     padding: 50px;
 }
 
-.home-intro button {
-    font-weight: bold;
-    padding: 30px;
-    display: inline-block;
-    align-items: center;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
 .about {
-    text-align: center;
     margin-top: 20px;
+    padding: 40px;
 }
 
 .menu-container {
-    max-width: 50%;
+    max-width: 50vh;
     margin: auto;
 }
+
 
 .menu-signature {
     color: aliceblue;
@@ -81,23 +74,35 @@ button {
     padding-bottom: 70px;
 }
 
+label {
+    font-weight: bold;
+}
+
 .booking-form {
-    background-color: rgba(250, 249, 246, 0.5);
-    padding: 10px;
+    background-color: rgba(250, 249, 246, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .booking-form-fields {
     padding: 10px;
     margin: 20px;
-    font-weight: bold;
 }
 
-.booking-image-fixed {
-    position: fixed;
-    top: calc(var(--book-header-scroll-offset) * 1px);
-    bottom: 0;
-    right: 0;
-   
+.booking-image {
+    background-image: url('/static/images/feedme2.jpg');
+    background-size: 100%;
+    min-height: calc(100vh - 80px);
+    width: 100%;
+    background-size: cover;
+    
 }
 
 label {
@@ -124,3 +129,4 @@ footer {
     transform: translateX(-10px); // translateX, translateY, translateZ works well
     transition: visibility 0s 250ms, opacity 250ms, transform 250ms;
 }
+
