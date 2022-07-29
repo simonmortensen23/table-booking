@@ -39,8 +39,7 @@ input {
     margin: 2px;
 }
 
-.home-image {
-    /* background-image: url('{{STATIC_URL}}/images/feedme.jpg'); */
+.background-image {
     min-height: calc(80vh - 80px);
     width: 100%;
     background-size: cover;
@@ -104,23 +103,6 @@ label {
     margin: 20px;
 }
 
-.booking-image {
-    background-image: url('static/images/feedme2.jpg');
-    background-size: 100%;
-    min-height: calc(100vh - 80px);
-    width: 100%;
-    background-size: cover;
-    
-}
-
-.signup-image {
-    background-image: url('static/images/feedme3.jpg');
-    background-size: 100%;
-    min-height: calc(100vh - 80px);
-    width: 100%;
-    background-size: cover;
-}
-
 label {
     text-align: center;
 }
@@ -137,6 +119,7 @@ footer {
     transition: visibility 0s, opacity 250ms, transform 250ms;
 }
 .messages.hide {
+    display: none;
     position: relative;
     opacity: 0;
     visibility: hidden;

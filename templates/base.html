@@ -54,7 +54,7 @@
             </div>
          </div>
       </nav>
-      <div class="container">
+      <div class="container messages">
          <div class="row">
             <div class="col-md-8 offset-md-2">
                {% if messages %}
@@ -69,6 +69,7 @@
       </div>
       <main class="flex-shrink-0 main-bg">
          {% block content %}
+         {% load static %}
          {% endblock content %}
       </main>
       <!-- Footer -->
