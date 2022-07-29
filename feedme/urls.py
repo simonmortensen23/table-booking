@@ -1,5 +1,11 @@
-from . import views
+'''
+Urls that allow communication and redirection between
+the applications pages
+'''
+
 from django.urls import path
+from feedme import views
+
 
 urlpatterns = [
     path('', views.view_home, name='home'),

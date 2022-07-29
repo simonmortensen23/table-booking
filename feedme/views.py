@@ -29,6 +29,8 @@ def make_booking(request):
     """
     if request.method == 'POST':
         form = BookingForm(request.POST)
+        # validation_response = validate_booking(form)
+        # if not validation_response:
         if form.is_valid():
             booking = form.save()
             booking.user = request.user
@@ -42,7 +44,23 @@ def make_booking(request):
         'form': form
         }
     return render(request, 'make_booking.html', context)
+    
+    
+# def validate_booking(booking_form):
+#     form = BookingForm(booking_form)
+#     if form.is_valid():
+#         return 'Booking date must be in the future.'
+#     elif find_booking(form):
+#         return 'booking already exists'
 
+# def find_booking(form):
+#     user = request.user
+#     booking_date = form.booking_date
+#     booking_time = form.booking_time
+#     unique_booking = Booking.objects.filter(
+#         user=user, booking_date=booking_date, booking_time=booking_time).exists()
+#     return unique_booking
+        
 
 @login_required
 def view_booking(request):

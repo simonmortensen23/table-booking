@@ -1,16 +1,24 @@
+'''
+Test cases for applications different views
+and the users access to the views
+'''
 from django.test import TestCase, RequestFactory
 from django.contrib.auth.models import User
-from django.urls import reverse, resolve
 from .models import Booking
-from .views import make_booking, view_booking, edit_booking, delete_booking
+from .views import make_booking, view_booking, edit_booking
 # Create your tests here.
 
+
 class TestViews(TestCase):
-    
+    '''
+    Setup for test user for pages that require
+    login access
+    '''
     @classmethod
-    def setUp(self):
-        self.factory = RequestFactory()
-        self.user = User.objects.create_user(email='test@test.org', username='john', password='Test!2345')
+    def setUp(cls):
+        cls.factory = RequestFactory()
+        cls.user = User.objects.create_user(
+            email='test@test.org', username='john', password='Test!2345')
 
     def test_get_home_page(self):
         print('Test Home Page')
@@ -46,18 +54,3 @@ class TestViews(TestCase):
         request.user = self.user
         response = view_booking(request)
         self.assertEqual(response.status_code, 200)
-
-    # def test_get_edit_booking(self):
-    #     booking = Booking.objects.create(customer='Test Costumer')
-    #     request = self.factory.get(f'/edit/{booking.id}')
-    #     request.user = self.user
-    #     customer = 'Test customer 2'
-    #     self.assertEqual(len(existing_booking), 0)
-
-    # def test_can_delete_booking(self):
-    #     booking = Booking.objects.create(customer='Test Costumer')
-    #     request = self.factory.get(f'/delete/{booking.id}')
-    #     request.user = self.user
-    #     existing_booking = Booking.objects.filter(id=booking.id)
-    #     self.assertEqual(len(existing_booking), 0)
-        
