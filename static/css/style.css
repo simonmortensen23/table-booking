@@ -40,7 +40,7 @@ input {
 }
 
 .home-image {
-    background-image: url('/feedme.jpg');
+    /* background-image: url('{{STATIC_URL}}/images/feedme.jpg'); */
     min-height: calc(80vh - 80px);
     width: 100%;
     background-size: cover;
