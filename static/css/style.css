@@ -40,7 +40,7 @@ input {
 }
 
 .home-image {
-    background-image: url('/static/images/feedme.jpg');
+    background-image: url('static/images/feedme.jpg');
     min-height: calc(80vh - 80px);
     width: 100%;
     background-size: cover;
@@ -105,7 +105,7 @@ label {
 }
 
 .booking-image {
-    background-image: url('/static/images/feedme2.jpg');
+    background-image: url('static/images/feedme2.jpg');
     background-size: 100%;
     min-height: calc(100vh - 80px);
     width: 100%;
@@ -114,7 +114,7 @@ label {
 }
 
 .signup-image {
-    background-image: url('/static/images/feedme3.jpg');
+    background-image: url('static/images/feedme3.jpg');
     background-size: 100%;
     min-height: calc(100vh - 80px);
     width: 100%;
