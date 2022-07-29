@@ -38,12 +38,8 @@ class BookingForm(forms.ModelForm):
         to third field.
         """
         super().__init__(*args, **kwargs)
-        self.fields['customer'].widget.attrs['class'] = 'booking-form-fields'
-        self.fields['people'].widget.attrs['class'] = 'booking-form-fields'
-        self.fields['phone_number'].widget.attrs[
-            'class'] = 'booking-form-fields'
-        self.fields['booking_date'].widget.attrs[
-            'class'] = 'booking-form-fields'
-        self.fields['booking_time'].widget.attrs[
-            'class'] = 'booking-form-fields'
+        self.fields['customer'].widget.attrs['required'] = 'required'
+        self.fields['people'].widget.attrs['required'] = 'required'
         self.fields['phone_number'].widget.attrs['required'] = 'required'
+        self.fields['booking_date'].widget.attrs['required'] = 'required'
+        self.fields['booking_time'].widget.attrs['required'] = 'required'
