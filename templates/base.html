@@ -60,7 +60,7 @@
                {% if messages %}
                <ul class="messages">
                   {% for message in messages %}
-                  <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+                  <li {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
                   {% endfor %}
                </ul>
                {% endif %}
@@ -80,4 +80,13 @@
          </ul>
       </footer>
    </body>
+   <script>
+      var m = document.getElementsByClassName("messages");  
+
+      setTimeout(function(){
+         if (m && m.length) {
+             m[0].classList.add('hide');
+         }
+      }, 3000);
+   </script>
 </html>

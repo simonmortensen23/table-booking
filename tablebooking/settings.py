@@ -33,6 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = ['table-booking2022.herokuapp.com', 'localhost']
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 
 # Application definition
