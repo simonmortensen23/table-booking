@@ -5,7 +5,14 @@ from .models import Booking
 from .forms import BookingForm
 
 # Create your views here.
-
+def status_500(request, *args, **kwargs):
+    bookings = Booking.objects.all()
+    context = {
+        'bookings': bookings
+    }
+    response = render(request, '500.html', context)
+    response.status_code = 500
+    return response
 
 def view_home(request):
     """
@@ -109,3 +116,6 @@ def delete_booking(request, booking_id):
     booking.delete()
     messages.success(request, 'Your booking has been deleted.')
     return redirect('view_booking')
+
+
+

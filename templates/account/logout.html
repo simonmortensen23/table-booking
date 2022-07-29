@@ -5,9 +5,9 @@
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
 {% block content %}
-
-<h1>{% trans "Sign Out" %}</h1>
-<div class="booking-form">
+<section class="signup-image rounded col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
+  <div class="booking-form col-md-4 col-md-offset-4">
+<h1>{% trans "Sign Out" %} <i class="fas fa-sign-out-alt"></i></h1>
 <p>{% trans 'Are you sure you want to sign out?' %}</p>
 
 <form method="post" action="{% url 'account_logout' %}">
@@ -18,5 +18,5 @@
   <button type="submit" onclick="confirmation">{% trans 'Sign Out' %}</button>
 </form>
 </div>
-
+</section>
 {% endblock %}

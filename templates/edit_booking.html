@@ -5,7 +5,7 @@
 
 <section class="page-section clearfix">
     <div class="container">
-        <div class="intro">
+        <div>
             <div class="left-0 text-center bg-faded p-5 rounded">
                 <h2 class="section-heading mb-4">
                     <span class="section-heading-upper">Edit your booking</span>
@@ -16,7 +16,7 @@
                 <p><a href="{% url 'view_booking' %}">Changed my mind, back to my booking</a></p>
                 <div class="row">
                     <div class="col-md-8 mt-3 offset-md-2">
-                        <form method="POST" name="form" class="booking-form">
+                        <form method="POST" name="form" class="form">
 
                             {{form|crispy}}
 

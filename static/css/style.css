@@ -1,14 +1,14 @@
 html, body {
     background-color: rgb(250, 249, 246);
     height: 100%;
-    color: rgb(6, 4, 3);
-    font-size: calc(12px + 0.390625vw);
+    font-size: calc(15px + 0.390625vw);
+    color:#02182d;
     
 }
 
 nav {
     background-color: rgb(250, 249, 246);
-    color: rgb(6, 4, 3);
+    
 }
 
 h1 {
@@ -18,10 +18,6 @@ h1 {
 
 ul, li {
     list-style: none;
-}
-
-i {
-    padding: 2px;
 }
 
 .card {
@@ -45,8 +41,7 @@ input {
 
 .home-image {
     background-image: url('/static/images/feedme.jpg');
-    background-size: 100%;
-    min-height: calc(100vh - 80px);
+    min-height: calc(80vh - 80px);
     width: 100%;
     background-size: cover;
     
@@ -54,12 +49,12 @@ input {
 
 .home-intro {
     background-color: rgba(250, 249, 246, 0.9);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0 auto;
     text-align: center;
-    padding-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 40px;
+    box-shadow: 5px 10px rgba(145,91,65, 0.5);
 }
 
 .home-intro-text {
@@ -96,10 +91,7 @@ label {
 
 .booking-form {
     background-color: rgba(250, 249, 246, 0.9);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0 auto;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -134,9 +126,7 @@ label {
 }
 
 footer {
-    background-color: rgb(250, 249, 246);
-    color: rgb(6, 4, 3);
-    
+    background-color: rgba(250, 249, 246);
 }
 
 .messages {
@@ -150,7 +140,7 @@ footer {
     position: relative;
     opacity: 0;
     visibility: hidden;
-    transform: translateX(-10px); // translateX, translateY, translateZ works well
+    transform: translateX(-10px); 
     transition: visibility 0s 250ms, opacity 250ms, transform 250ms;
 }
 
