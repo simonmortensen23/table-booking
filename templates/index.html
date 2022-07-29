@@ -1,39 +1,33 @@
 {% extends "base.html" %}
-
 {% block content %}
-
 <div class="container-fluid home home-image rounded col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
-    
-        <div class="home-intro col-md-4 col-md-offset-4">
-            <div class="home-intro-text">
-                <h1>Feed Me</h1>
-                <p>Feeding people since 2022</p>
-            </div>
-                <button onclick="window.location.href={% url 'make_booking' %};">
-                    Book Table
-                </button>
-                <button onclick="window.location.href={% url 'menu' %};">
-                    Menu
-                </button>
-        </div>
-    
+   <div class="home-intro col-md-4 col-md-offset-4">
+      <div class="home-intro-text">
+         <h1>Feed Me</h1>
+         <p>Feeding people since 2022</p>
+      </div>
+      <button onclick="window.location.href={% url 'make_booking' %};">
+      Book Table
+      </button>
+      <button onclick="window.location.href={% url 'menu' %};">
+      Menu
+      </button>
+   </div>
 </div>
 <div class="container-fluid about">
-    <div class="about-info container">
-        <h2 class="text-center">About:</h2>
-        <p class='lh-base'><span class="about text-start">Let us challenge your taste buds in our experimental and unconventional kitchen.
-             In our kitchen, the sky’s the limit – we push the boundaries,
-                set to decide what’s possible – and legal! At Feed Me we are not afraid to play with new taste combinations or raw materials.</span><br>
-
-            <span class="about text-start">Our menu is created by the chef, and it is simple and understandable.
-            The chef has carefully selected his own favorite dishes and with new raw materials he has lifted them to a whole new level.
-            A level that kicks a**! Look forward to biting into delicious Danish classics – you have never had them like this before!</span>
-            <span><br></span>
-            
-        <span class="about text-start text-left">We went all the way to give you a hell of a night! 
-            Step into the Feed Me universe and explore the symphony of amazing raw materials, sassy serving, neon signs and playful culinary dishes.</span><br>
-            
-        <span class='text-start text-left'>See you at Feed Bistro!</span></p>
-    </div>
+   <div class="about-info container">
+      <h2 class="text-center">About:</h2>
+      <p class='lh-base'><span class="about text-start">Let us challenge your taste buds in our experimental and unconventional kitchen.
+         In our kitchen, the sky’s the limit – we push the boundaries,
+         set to decide what’s possible – and legal! At Feed Me we are not afraid to play with new taste combinations or raw materials.</span><br>
+         <span class="about text-start">Our menu is created by the chef, and it is simple and understandable.
+         The chef has carefully selected his own favorite dishes and with new raw materials he has lifted them to a whole new level.
+         A level that kicks a**! Look forward to biting into delicious Danish classics – you have never had them like this before!</span>
+         <span><br></span>
+         <span class="about text-start text-left">We went all the way to give you a hell of a night! 
+         Step into the Feed Me universe and explore the symphony of amazing raw materials, sassy serving, neon signs and playful culinary dishes.</span><br>
+         <span class='text-start text-left'>See you at Feed Bistro!</span>
+      </p>
+   </div>
 </div>
 {% endblock content %}

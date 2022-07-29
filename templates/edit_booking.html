@@ -2,39 +2,25 @@
 {% load static %}
 {% block content %}
 {% load crispy_forms_tags %}
-
 <section class="page-section clearfix">
-    <div class="container">
-        <div>
-            <div class="left-0 text-center bg-faded p-5 rounded">
-                <h2 class="section-heading mb-4">
-                    <span class="section-heading-upper">Edit your booking</span>
-
-
-                </h2>
-
-                <p><a href="{% url 'view_booking' %}">Changed my mind, back to my booking</a></p>
-                <div class="row">
-                    <div class="col-md-8 mt-3 offset-md-2">
-                        <form method="POST" name="form" class="form">
-
-                            {{form|crispy}}
-
-
-                            {% csrf_token %}
-
-
-                            <div class="intro-button mx-auto"><button class="btn btn-primary btn-xl"
-                                    type="submit">Submit edited booking</button>
-                            </div>
-                        </form>
-
-                    </div>
-                </div>
+   <div class="container">
+      <div class="left-0 text-center bg-faded p-5 rounded">
+         <h2 class="section-heading mb-4">
+            <span class="section-heading-upper">Edit your booking</span>
+         </h2>
+         <p><a href="{% url 'view_booking' %}">Changed my mind, back to my booking</a></p>
+         <div class="row">
+            <div class="col-md-8 mt-3 offset-md-2">
+               <form method="POST" name="form" class="form">
+                  {{form|crispy}}
+                  {% csrf_token %}
+                  <div class="intro-button mx-auto"><button class="btn btn-primary btn-xl"
+                     type="submit">Submit edited booking</button>
+                  </div>
+               </form>
             </div>
-        </div>
-    </div>
+         </div>
+      </div>
+   </div>
 </section>
-
-
 {% endblock content %}

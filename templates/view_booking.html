@@ -1,81 +1,57 @@
-
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
 {% load crispy_forms_tags %}
-
-
-
 <div class="table-responsive-sm">
-    <table class="table table-hover table-dark">
-        <h1>View Bookings</h1>
-        <h2 class="text-center">made by <i>{{ user.username }}</i></h2>
-        
-            {% for booking in bookings %}
-
-            <div class="card">
-                    <div class="card-header">
-                    Booking {{ booking.id }} by {{ booking.customer }}
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <div class="button"><a class="btn btn-primary btn-xl"
-                            href="/edit/{{ booking.id }}">Edit
-                            Booking</a>
-                        </div>
-                            <a type="button" class="btn btn-danger btn-xl" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                Delete Booking
-                            </a>   
-                    </div>                    
-                    </div>
-
-
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Delete Booking</h5>
-          <button type="button" class="close" data-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Are you sure you want to delete your booking?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Close</button>
-          <a class="btn btn-primary btn-danger btn-xl"
-                                    href="/delete/{{ booking.id }}"type="submit">Delete Booking</a></div>
-        </div>
+   <table class="table table-hover table-dark">
+      <h1>View Bookings</h1>
+      <h2 class="text-center">made by <i>{{ user.username }}</i></h2>
+      {% for booking in bookings %}
+      <div class="card">
+         <div class="card-header">
+            Booking {{ booking.id }} by {{ booking.customer }}
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+               <div class="button"><a class="btn btn-primary btn-xl"
+                  href="/edit/{{ booking.id }}">Edit
+                  Booking</a>
+               </div>
+               <a type="button" class="btn btn-danger btn-xl" data-bs-toggle="modal" data-bs-target="#confirmDelteModal">
+               Delete Booking
+               </a>   
+            </div>
+         </div>
+         <!-- Modal -->
+         <div class="modal fade" id="confirmDelteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDelteModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h5 class="modal-title" id="confirmDelteModal">Delete Booking</h5>
+                     <button type="button" class="close" data-dismiss="modal" data-bs-toggle="modal" data-bs-target="#confirmDelteModal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                     </button>
+                  </div>
+                  <div class="modal-body">
+                     Are you sure you want to delete your booking?
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal" data-bs-toggle="modal" data-bs-target="#confirmDelteModal">Close</button>
+                     <a class="btn btn-primary btn-danger btn-xl"
+                        href="/delete/{{ booking.id }}"type="submit">Delete Booking</a>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-  </div>
-
-
-                    <div class="card-body">
-                    <blockquote class="blockquote mb-0">
-                        <p>Booking for {{ booking.people }} person(s) the {{ booking.booking_date.date}} at {{ booking.booking_time }} by {{ booking.customer }}</p>
-                        <footer class="blockquote-footer">Booking created: {{ booking.created_on }}</footer>
-                    </blockquote>
-                    </div>
-                    <br>
-              </div>
-            
-        {% endfor %}
-        {% csrf_token %}
-        
-    </table>
-    
-    
+      <div class="card-body">
+         <blockquote class="blockquote mb-0">
+            <p>Booking for {{ booking.people }} person(s) the {{ booking.booking_date.date}} at {{ booking.booking_time }} by {{ booking.customer }}</p>
+            <footer class="blockquote-footer">Booking created: {{ booking.created_on }}</footer>
+         </blockquote>
+      </div>
+      <br>
 </div>
-<script>
-    function confirmation(){
-      var result = confirm("Are you sure to delete?");
-      if(result){
-        alert("Deleted")
-      } else {
-        alert('Action cancelled')
-      }
-    }
-  </script>
+{% endfor %}
+{% csrf_token %}
+</table>
+</div>
 {% endblock content %}

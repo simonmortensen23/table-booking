@@ -1,100 +1,83 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <title>Feed Me</title>
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-</head>
-
-<body class="d-flex flex-column h-100 main-bg">
-
-    <!-- Navigation -->
-
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
+   <head>
+      <title>Feed Me</title>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   </head>
+   <body class="d-flex flex-column h-100 main-bg">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-light">
+         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}">Feed Me</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+               aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-                    </li>
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="{% url 'view_booking' %}">View Booking</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                    </li>
-                    
-                    {% endif %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'make_booking' %}">Make Booking</a>    
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'menu' %}">Menu</a>    
-                    </li>
-                </ul>
-                <span class="navbar-text text-muted">
-                    Table Booking Service
-                </span>
+               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                     <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                  </li>
+                  {% if user.is_authenticated %}
+                  <li class="nav-item">
+                     <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                  </li>
+                  <li>
+                     <a class="nav-link" href="{% url 'view_booking' %}">View Booking</a>
+                  </li>
+                  {% else %}
+                  <li class="nav-item">
+                     <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                  </li>
+                  {% endif %}
+                  <li class="nav-item">
+                     <a class="nav-link" href="{% url 'make_booking' %}">Make Booking</a>    
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="{% url 'menu' %}">Menu</a>    
+                  </li>
+               </ul>
+               <span class="navbar-text text-muted">
+               Table Booking Service
+               </span>
             </div>
-        </div>
-    </nav>
-
-    <div class="container">
-        <div class="row">
+         </div>
+      </nav>
+      <div class="container">
+         <div class="row">
             <div class="col-md-8 offset-md-2">
-                {% if messages %}
-                <ul class="messages">
-                    {% for message in messages %}
-                    <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-            </div>    
-        </div>    
-    </div>    
-
-    <main class="flex-shrink-0 main-bg">
-       
-        {% block content %}
-        
-        {% endblock content %}
-       
-        
-    </main>
-    
-    <!-- Footer -->
-    <footer class="footer mt-auto py-3 text-center">
-        <p class="m-0 fw-bold">Opening Times:</p>
-        <ul class="m-0 fw-bold">
+               {% if messages %}
+               <ul class="messages">
+                  {% for message in messages %}
+                  <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+                  {% endfor %}
+               </ul>
+               {% endif %}
+            </div>
+         </div>
+      </div>
+      <main class="flex-shrink-0 main-bg">
+         {% block content %}
+         {% endblock content %}
+      </main>
+      <!-- Footer -->
+      <footer class="footer mt-auto py-3 text-center">
+         <p class="m-0 fw-bold">Opening Times:</p>
+         <ul class="m-0 fw-bold">
             <li>Monday-Friday: 16.30-23.00</li>
             <li>Weekends: 14.00-23.00</li>
-        </ul>
-    </footer>
-</body>
-
+         </ul>
+      </footer>
+   </body>
 </html>
-
