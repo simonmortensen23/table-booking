@@ -99,10 +99,10 @@ Pylint was used to validate python files.
  I wasn't able to fix these errors as I couldn't identify them in my html files. There was no p tag on line 89 and no html files has 103 lines in the project. 
  
  - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftable-booking2022.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-   - No errors found. [CSS Validator](https://github.com/simonmortensen23/table-booking/blob/main/testImages/Validators/cssvali.PNG)
+   - No errors found. [CSS Validator Image](https://github.com/simonmortensen23/table-booking/blob/main/testImages/Validators/cssvali.PNG)
    
 - Pylint
-  - A few errors in python files I couldn't fix. 
+  - A few errors in python files I couldn't fix. [Pylint Views](https://github.com/simonmortensen23/table-booking/blob/main/testImages/Validators/pylintViews.PNG) - [Pylint Models](https://github.com/simonmortensen23/table-booking/blob/main/testImages/Validators/pylintModels.PNG)
 
 ### Testing User Stories (Manual Testing)
 - [Register Account](https://github.com/simonmortensen23/table-booking/projects/1#card-84321005)
