@@ -30,16 +30,16 @@ Site admins have full access to all bookings and all CRUD functionalities.
 
 ## Design
 
-# Page colors
+### Page colors
 - The main colors for the website are navy blue (rgb(2,24,45)), brown (rgb(145,91,65)) and white (rgb(250,249,246)) to keep a simple and consistent look throught the website.
 
-# Fonts
+### Fonts
 - I am using Overlock as text type with cursive as fallback font. 
 
-# Images
+### Images
 - I have chosen the images to try to match the colorschemes and fit the design of the webpage. The different booking pages use the same picture to make it feel consistent and similar does the signup pages. 
 
-# Style
+### Style
 - I mainly used bootstrap theme for styling my page mixed up with some custom CSS. All the pages standard layout is extended from base.html. All responsiveness is created through bootstrap.
 
 ## Features
@@ -90,6 +90,11 @@ The main feature of this website is the booking functions. As the goal of this w
 
 ## Testing
 
+W3C Markup Validator and W3C CSS Validator was used to validate HTML and CSS to ensure no syntax errors is found in the project. 
+Pylint was used to validate python files.
+
+- 
+
 ### Testing User Stories (Manual Testing)
 - [Register Account](https://github.com/simonmortensen23/table-booking/projects/1#card-84321005)
   - **Acceptance Criteria**: A user should be able to register for an account and have an option to go to login page if they already have an account. The registration form should indicate clearly what fields are required by showing a message on the field if it is not filled out. The required fields are Email-adress, Username and Password. When entering email-adress it autofills username but can be edited if user prefers unique username. 
@@ -134,43 +139,39 @@ Username and Customer name are different as the user should be able to make book
   - **Summary**: The responsiveness makes it easy for the user to access and make use of all functions no matter what device they are using.
   - **Outcome**: Oass
        
-# Automated Tests
+### Automated Tests
 I started out trying to make automated pytests of the views, model and form, but was not able to reach the 100% coverage. I did not have the sufficient skills to cover all tests. 
 ![image](https://user-images.githubusercontent.com/43667190/181904224-4b3e55ea-8b50-4e3e-a612-6a836adf15bf.png)
 
 ## Deployment
-Deployment
-Heroku
-The project was created in Github first and then transferred to the Gitpod development environment by the use of the green Gitpod button.
 
-Initial Deployment
-When creating a Django project, it is highly advisable to deploy early, due to the compexities of the development process and the actual application.
-In the Gitpod environment a skeleton django project was created (project, app and relating files).
-A Heroku app was created in Heroku.
-In Heroku, under the Resources tab, in Add-ons, I searched for Postgres. When found I submitted a request to use it. This attached Heroku Postgres to my project in Heroku.
-In the Heroku Settings tab I clicked on "Reveal Config Vars" and copied the automatically added postgres link from beside the DATABASE_URL variable.
-In Gitpod dev environment, I looked for the env.py file that was automatially generated from the CI template at the beginning. This file stores environment variables.
-After importing the os into the env.py file, I added the database URL from Heroku into env.py.
-I added a secret key in the env.py file after having it generated on the Django Secret Key Generator - MiniWebtool website.
-I added the secret key into the Heroku Settings > config vars as well.
-In the settings.py file in Gitpod I imported os and added an if statement saying that outside the development environment the environment variables must be used from env.py, including the secret key.
-Still in the settings.py file, I commented out the present code for databases and added code to use the currently set up django database URL as set in the env.py file and also in the Heroku config vars.
-I migrated these changes in Gitpod using python3 manage.py migrate
-To get static and media sites stored on Cloudinary, I went to the dashboard of my previously created Cloudinary account and copied the API Environment Variable.
-I added this to the Gitpod env.py file and into the Heroku Settings > config vars.
-I also added DISABLE_COLLECTATIC = 1 to the Heroku config vars.
-I added cloudinary and cloudinary_storage to the installed apps in settings.py.
-I set up the static file storage, static file directory, the static root, the media url, the default file storage and the templates directory in settings.py.
-I added the Heroku name followed by herokuapp.com to the ALLOWED_HOSTS variable name in settings.py, followed by a comma and 'localhost' (to allow running in the development environment).
-I created 2 directories at the top level: static, templates.
-I created a Procfile at the top level directory.
-I did a git add, git commit and git push.
-In the Deployment tab in Heroku, in Deployment method, I added Github, set up Enable Automated Deployment, looked for my Github repository, connected my Heroku app to it and clicked on Deploy Branch at the bottom of the page.
-When I opened the app after the app was built and deployed, I saw the success message page with a rocket.
-After my application was built, as the first step of the final deployment I turned Debug to False in the settings.py file in Gitpod.
-In Heroku I removed the DISABLE_COLLECTSTATIC variable.
-I saved my changes on all my files and performed a git add, git commit and git push.
-As automatic depoyment had been enabled in Heroku, I waited until my app was built, then I opened it and made sure that all functionalities work.
+1. The project was created in Github first and then transferred to the Gitpod development environment by the use of the green Gitpod button.
+2. Created a skeleton for the django project in Gitpod environment and installed different packages follwing Hello Django guide.
+3. Created Heroku App in Heroku.
+4. In Heroku, under the Resources tab, in Add-ons, I searched for Postgres. When found I submitted a request to use it. This attached Heroku Postgres to my project in Heroku.
+5. In the Heroku Settings tab I clicked on "Reveal Config Vars" and copied the automatically added postgres link from beside the DATABASE_URL variable.
+6. In Gitpod dev environment, I looked for the env.py file that was automatially generated from the CI template at the beginning. This file stores environment variables.
+7. After importing the os into the env.py file, I added the database URL from Heroku into env.py.
+8. I added a secret key in the env.py file.
+9. I added the secret key into the Heroku Settings > config vars as well.
+10. In the settings.py file in Gitpod I imported os and added an if statement saying that outside the development environment the environment variables must be used from env.py, including the secret key.
+11. In the settings.py file, I commented out the present code for sqllite database and added code to use the Postgress set up django database URL as set in the env.py file and also in the Heroku config vars.
+12. I migrated these changes in Gitpod using python3 manage.py migrate
+13. To get static and media sites stored on Cloudinary, I went to the dashboard of my previously created Cloudinary account and copied the API Environment Variable.
+14. I added this to the Gitpod env.py file and into the Heroku Settings > config vars.
+15. I also added DISABLE_COLLECTATIC = 1 to the Heroku config vars.
+16. I added cloudinary and cloudinary_storage to the installed apps in settings.py.
+17. I set up the static file storage, static file directory, the static root, the media url, the default file storage and the templates directory in settings.py.
+18. I added the Heroku name followed by herokuapp.com to the ALLOWED_HOSTS variable name in settings.py.
+19. I created 2 directories at the top level: static, templates.
+20. I created a Procfile at the top level directory.
+21. I did a git add, git commit and git push.
+22. In the Deployment tab in Heroku, in Deployment method, I added Github, looked for my Github repository, connected my Heroku app to it and clicked on Deploy Branch at the bottom of the page.
+23. When I opened the app after the app was built and deployed, I saw the success message page with a rocket.
+24. After my application was built, as the first step of the final deployment I turned Debug to False in the settings.py file in Gitpod.
+25. In Heroku I removed the DISABLE_COLLECTSTATIC variable.
+26. I saved my changes on all my files and performed a git add, git commit and git push.
+27. As automatic depoyment had been enabled in Heroku, I waited until my app was built, then I opened it and made sure that all functionalities work.
 
 ## Credits
        
