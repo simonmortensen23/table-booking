@@ -93,7 +93,16 @@ The main feature of this website is the booking functions. As the goal of this w
 W3C Markup Validator and W3C CSS Validator was used to validate HTML and CSS to ensure no syntax errors is found in the project. 
 Pylint was used to validate python files.
 
-- 
+- [W3C Markup Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftable-booking2022.herokuapp.com%2F)
+  - Error: No p element in scope but a p end tag seen from line 89. 
+  - Error:  Stray start tag script. from line 103.
+ I wasn't able to fix these errors as I couldn't identify them in my html files. There was no p tag on line 89 and no html files has 103 lines in the project. 
+ 
+ - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftable-booking2022.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+   - No errors found. [CSS Validator](https://github.com/simonmortensen23/table-booking/blob/main/testImages/Validators/cssvali.PNG)
+   
+- Pylint
+  - A few errors in python files I couldn't fix. 
 
 ### Testing User Stories (Manual Testing)
 - [Register Account](https://github.com/simonmortensen23/table-booking/projects/1#card-84321005)
