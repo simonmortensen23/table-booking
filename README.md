@@ -96,13 +96,15 @@ Pylint was used to validate python files.
 - [W3C Markup Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftable-booking2022.herokuapp.com%2F)
   - Error: No p element in scope but a p end tag seen from line 89. 
   - Error:  Stray start tag script. from line 103.
- I wasn't able to fix these errors as I couldn't identify them in my html files. There was no p tag on line 89 and no html files has 103 lines in the project. [HTML Validator Image](https://github.com/simonmortensen23/table-booking/blob/main/testImages/Validators/htmlvali.PNG)
+  - I wasn't able to fix these errors as I couldn't identify them in my html files. There was no p tag on line 89 and no html files has 103 lines in the project. 
+  - [HTML Validator Image](https://github.com/simonmortensen23/table-booking/blob/main/testImages/Validators/htmlvali.PNG)
  
  - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftable-booking2022.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-   - No errors found. [CSS Validator Image](https://github.com/simonmortensen23/table-booking/blob/main/testImages/Validators/cssvali.PNG)
+   - No errors found. 
+   - [CSS Validator Image](https://github.com/simonmortensen23/table-booking/blob/main/testImages/Validators/cssvali.PNG)
    
 - Pylint
-  - A few errors in python files I couldn't fix. [Pylint Views](https://github.com/simonmortensen23/table-booking/blob/main/testImages/Validators/pylintViews.PNG) - [Pylint Models](https://github.com/simonmortensen23/table-booking/blob/main/testImages/Validators/pylintModels.PNG)
+  - A few errors in python files I couldn't fix. [Pylint Views](https://github.com/simonmortensen23/table-booking/blob/main/testImages/Validators/pylintViews.PNG) -     - [Pylint Models](https://github.com/simonmortensen23/table-booking/blob/main/testImages/Validators/pylintModels.PNG)
 
 ### Testing User Stories (Manual Testing)
 - [Register Account](https://github.com/simonmortensen23/table-booking/projects/1#card-84321005)
@@ -110,27 +112,27 @@ Pylint was used to validate python files.
 There are also restriction on duplicate email adress and password. If a user is already registered in the database with a given email, the registration will not be accepted and the user will be shown an error message that explains the issue. The password must be atleast 8 characters and cannot only contain either numbers or letters
   - **Summary**: Form is easy to use, and has warning messages for required fields. Other warning messages also clearly explains the users issue.
   - **Outcome**: Pass
-[Register Test Images](https://github.com/simonmortensen23/table-booking/tree/main/testImages/register)
+  - [Register Test Images](https://github.com/simonmortensen23/table-booking/tree/main/testImages/register)
 
 - [Make Booking](https://github.com/simonmortensen23/table-booking/projects/1#card-84321014) 
   - **Acceptance Criteria**: A user should be able make a booking and choose what day and time and how big the company of people are. The booking form should indicate clearly what fields are required by showing a warning message on the field if it is not filled out. The required fields are Customer, People, Phone Number, Booking Date, Booking Time. The form has a few restrictions of past dates and a unique_together combination of user, customer, booking date and booking time. If any of those criterias are met the user will be shown an error message that explains the issue.
   - **Summary**: Form is easy to use, and has warning messages for required fields. Other warning messages also clearly explains the users issue.
   - **Outcome**: Pass
-[Make Booking Test Images](https://github.com/simonmortensen23/table-booking/tree/main/testImages/make_booking)
+  - [Make Booking Test Images](https://github.com/simonmortensen23/table-booking/tree/main/testImages/make_booking)
 
 - [Edit Booking](https://github.com/simonmortensen23/table-booking/projects/1#card-84321010) 
   - **Acceptance Criteria**: A user should be able to edit an already made booking. As edit booking form looks very similar to Make booking, the user is confirmed by the header of the form. The booking form is autofilled with the current data of the booking, so the user only has to edit the specific field(s) that is needed. 
 Furthermore the user has the option to return to the View Booking page if they don't want to the edit booking.
   - **Summary**: Form is easy to use, and seperates from booking form by the header and submit button.
   - **Outcome**: Pass
-[Edit Booking Test Image](https://github.com/simonmortensen23/table-booking/blob/main/testImages/edit_booking/editForm.PNG)
+  - [Edit Booking Test Image](https://github.com/simonmortensen23/table-booking/blob/main/testImages/edit_booking/editForm.PNG)
 
 
 - [Cancel Booking](https://github.com/simonmortensen23/table-booking/projects/1#card-84321015)
   - **Acceptance Criteria**: A user should be able to delete a booking from their View Booking page. The delete booking button is found on the View Bookings page and is clearly indicated with the text and red color of the button. The user needs to confirm the deletion of the booking in the modal popup that shows when the user hits delete booking. This secures that no booking are deleted by accident. The user also receives a success message that confirms the booking has been deleted.
   - **Summary**: The delete button clearly indicates it's action by the color and text of the button. The user is secured from making accidental and unnoticed deletions by the confirmation popup, and is clearly shown when the deletion is succesfull.
   - **Outcome**: Pass
-[Cancel Booking Test Images](https://github.com/simonmortensen23/table-booking/tree/main/testImages/cancel_booking)
+  - [Cancel Booking Test Images](https://github.com/simonmortensen23/table-booking/tree/main/testImages/cancel_booking)
 
 
 - [View Booking History](https://github.com/simonmortensen23/table-booking/projects/1#card-84367895)
@@ -138,7 +140,7 @@ Furthermore the user has the option to return to the View Booking page if they d
 Username and Customer name are different as the user should be able to make bookings for other companies if needed.
   - **Summary**: The view booking page shows the user the relevant information on the list of bookings, with two big buttons for editting or deleting the given booking. 
   - **Outcome**: Pass
-[View Booking Test Images](https://github.com/simonmortensen23/table-booking/tree/main/testImages/view_booking)      
+  - [View Booking Test Images](https://github.com/simonmortensen23/table-booking/tree/main/testImages/view_booking)      
        
 
 - [Redirect to login page](https://github.com/simonmortensen23/table-booking/projects/1#card-84321009)
@@ -151,13 +153,13 @@ Username and Customer name are different as the user should be able to make book
   - **Acceptance Criteria**: A user should be able to easily navigate the website using the nav bar. It should also indicate if the user is logged in or not by showing 'Register' and 'Login' options if user not logged in, and 'Logout' and 'View Booking' when logged in. The 'Register' and 'Login' options should not be shown when the user is logged in and 'Logout' and 'View Booking' when not logged in.
   - **Summary**: The Nav bar clearly indicates the loginstate of the user and helps the user to easily navigate the page by proper descriptions on the nav elements.
   - **Outcome**: Pass  
-[Nav Bar Test Images](https://github.com/simonmortensen23/table-booking/tree/main/testImages/NavBar)  
+  - [Nav Bar Test Images](https://github.com/simonmortensen23/table-booking/tree/main/testImages/NavBar)  
      
- - Responsiveness
-   - **Acceptance Criteria**: The whole page should be responsive to different device sizes by keeping structure of the userinterface and not overlapping the Nav bar when it is toggled on. The forms should also hold their structure and buttons stay within the form element. 
+- Responsiveness
+  - **Acceptance Criteria**: The whole page should be responsive to different device sizes by keeping structure of the userinterface and not overlapping the Nav bar when it is toggled on. The forms should also hold their structure and buttons stay within the form element. 
   - **Summary**: The responsiveness makes it easy for the user to access and make use of all functions no matter what device they are using.
   - **Outcome**: Pass
-[Responsiveness Test Images](https://github.com/simonmortensen23/table-booking/tree/main/testImages/Responsiveness)
+  - [Responsiveness Test Images](https://github.com/simonmortensen23/table-booking/tree/main/testImages/Responsiveness)
 
   
        
