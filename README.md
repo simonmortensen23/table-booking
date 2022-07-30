@@ -20,9 +20,31 @@ Site admins have full access to all bookings and all CRUD functionalities.
 7. [Redirect to login page](https://github.com/simonmortensen23/table-booking/projects/1#card-84321009)    
        
 
-## Layout
+## Design
+
+# Page colors
+- The main colors for the website are navy blue (rgb(2,24,45)), brown (rgb(145,91,65)) and white (rgb(250,249,246)) to keep a simple and consistent look throught the website.
+
+# Fonts
+- I am using Overlock as text type with cursive as fallback font. 
+
+# Images
+- I have chosen the images to try to match the colorschemes and fit the design of the webpage. The different booking pages use the same picture to make it feel consistent and similar does the signup pages. 
+
+# Style
+- I mainly used bootstrap theme for styling my page mixed up with some custom CSS. All the pages standard layout is extended from base.html. All responsiveness is created through bootstrap.
 
 ## Features
+- Nav Bar Links
+ - (Not logged in) Home, Register, Login, Make Booking, Menu
+ - (Logged in) Home, Logout, View Booking, Make Booking Menu
+- Forms
+ - Signup form
+ - Make Booking / Edit Booking
+- Buttons
+ - Book Table, Edit Booking, Delete Booking, Menu
+
+The main feature of this website is the booking functions. As the goal of this website is for people to book tables at the restaurant, almost every view will show a book table button or lead the user in that direction.
 
 ## Technologies Used
 
@@ -60,8 +82,6 @@ Site admins have full access to all bookings and all CRUD functionalities.
 
 ## Testing
 
-## Booking Form Validation
-
 ## Deployment
 Deployment
 Heroku
@@ -97,8 +117,18 @@ I saved my changes on all my files and performed a git add, git commit and git p
 As automatic depoyment had been enabled in Heroku, I waited until my app was built, then I opened it and made sure that all functionalities work.
 
 ## Credits
-#Code
- -
+## Code
+ - The walkthrough projects Hello Django and I think therefore I blog for initial setup, base html structure and CRUD functionality.
+ - Stackoverflow for problem solving. 
+ - [Django](https://www.djangoproject.com/) - for code functionalities.
+ - [Bootstrap](https://getbootstrap.com/) - for html setup and style.
+
+## Content
+- Base layout and NAV bar is taken from I think Therefor I Blog and adjusted to my page. And menu and descriptions have been inspired from different restaurants.
+
+## Media
+- Images are from [Pexels](https://www.pexels.com/)
+
 
 
 
