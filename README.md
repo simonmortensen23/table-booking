@@ -82,8 +82,39 @@ The main feature of this website is the booking functions. As the goal of this w
 
 ## Testing
 
-- Login Functions
- - NAV bar when not logged in ![image](https://user-images.githubusercontent.com/43667190/181880377-417787be-831b-4d03-8a65-944a983e57a7.png)
+### Testing User Stories
+- [Register Account](https://github.com/simonmortensen23/table-booking/projects/1#card-84321005)
+**Acceptance Criteria**: A user should be able to register for an account and have an option to go to login page if they already have an account. The registration form should indicate clearly what fields are required by showing a message on the field if it is not filled out. The required fields are Email-adress, Username and Password. When entering email-adress it autofills username but can be edited if user prefers unique username. 
+There are also restriction on duplicate email adress and password. If a user is already registered in the database with a given email, the registration will not be accepted and the user will be shown an error message that explains the issue. The password must be atleast 8 characters and cannot only contain either numbers or letters.
+**Summary**: Form is easy to use, and has warning messages for required fields. Other warning messages also clearly explains the users issue.
+**Outcome**: Pass
+
+- [Make Booking](https://github.com/simonmortensen23/table-booking/projects/1#card-84321014) 
+**Acceptance Criteria**: A user should be able make a booking and choose what day and time and how big the company of people are. The booking form should indicate clearly what fields are required by showing a warning message on the field if it is not filled out. The required fields are Customer, People, Phone Number, Booking Date, Booking Time. The form has a few restrictions of past dates and a unique_together combination of user, customer, booking date and booking time. If any of those criterias are met the user will be shown an error message that explains the issue.
+**Summary**: Form is easy to use, and has warning messages for required fields. Other warning messages also clearly explains the users issue.
+**Outcome**: Pass
+
+- [Edit Booking](https://github.com/simonmortensen23/table-booking/projects/1#card-84321010) 
+**Acceptance Criteria**: A user should be able to edit an already made booking. As edit booking form looks very similar to Make booking, the user is confirmed by the header of the form. The booking form is autofilled with the current data of the booking, so the user only has to edit the specific field(s) that is needed. 
+Furthermore the user has the option to return to the View Booking page if they don't want to the edit booking.
+**Summary**: Form is easy to use, and seperates from booking form by the header and submit button.
+**Outcome**: Pass
+
+- [Cancel Booking](https://github.com/simonmortensen23/table-booking/projects/1#card-84321015)
+**Acceptance Criteria**: A user should be able to delete a booking from their View Booking page. The delete booking button is found on the View Bookings page and is clearly indicated with the text and red color of the button. The user needs to confirm the deletion of the booking in the modal popup that shows when the user hits delete booking. This secures that no booking are deleted by accident. The user also receives a success message that confirms the booking has been deleted.
+**Summary**: The delete button clearly indicates it's action by the color and text of the button. The user is secured from making accidental and unnoticed deletions by the confirmation popup, and is clearly shown when the deletion is succesfull.
+**Outcome**: Pass
+
+- [View Booking History](https://github.com/simonmortensen23/table-booking/projects/1#card-84367895)
+**Acceptance Criteria**: A user should be able to get a clear and full overview of previous bookings and edit/delete them. The header shows the user what page they are on and a 'made by <user>'. The bookings are shown in a list where all the relevant information to the user from the form is shown and the creation date of the booking. On the right hand of the card, or bottom on mobile devices, the edit booking and delete booking buttons are shown, so the user easily can manage the bookings.
+Username and Customer name are different as the user should be able to make bookings for other companies if needed.
+**Summary**: The view booking page shows the user the relevant information on the list of bookings, with two big buttons for editting or deleting the given booking. 
+**Outcome**: Pass
+
+- [Redirect to login page](https://github.com/simonmortensen23/table-booking/projects/1#card-84321009) 
+
+### Testing Nav Bar and responsiveness
+
 
 
 ## Deployment
