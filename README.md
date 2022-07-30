@@ -3,7 +3,14 @@
 This is a table booking service for the restaurant, Feed Me. It is designed to be responsive on both PC, Tablet and Mobilephone, making it easy to navigate for visitors and users.
 
 ## Table of Contents
-[Introduction](#introduction)
+- [Introduction](#introduction)
+- [User Stories](#ux)
+- [Design](#design)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
 
 ## Introduction
 Feed Me - Table Booking Service is a restaurant booking website. First time users will be able to access the home page and menu page, and upon user registration they will be able to make bookings, view bookings and edit and delete specific bookings. 
@@ -47,15 +54,15 @@ Site admins have full access to all bookings and all CRUD functionalities.
 
 The main feature of this website is the booking functions. As the goal of this website is for people to book tables at the restaurant, almost every view will show a book table button or lead the user in that direction.
 
-## Technologies Used
+## Technologies
 
-### Languages Used
+### Languages
 - HTML5
 - CSS3
 - Python
 - Javascript
 
-### Frameworks, Libraries & Programs Used
+### Frameworks and libraries
 - Django:
   - The Python-based Django framework was used to set up the structure, functionalities, data model and database of the website.
 - Bootstrap 5.0.2:
@@ -166,17 +173,22 @@ I saved my changes on all my files and performed a git add, git commit and git p
 As automatic depoyment had been enabled in Heroku, I waited until my app was built, then I opened it and made sure that all functionalities work.
 
 ## Credits
-## Code
+       
+### Code
  - The walkthrough projects Hello Django and I think therefore I blog for initial setup, base html structure and CRUD functionality.
  - Stackoverflow for problem solving. 
  - [Django](https://www.djangoproject.com/) - for code functionalities.
  - [Bootstrap](https://getbootstrap.com/) - for html setup and style.
 
-## Content
+### Content
 - Base layout and NAV bar is taken from I think Therefor I Blog and adjusted to my page. And menu and descriptions have been inspired from different restaurants.
 
-## Media
+### Media
 - Images are from [Pexels](https://www.pexels.com/)
+       
+### Mentions
+- A huge thanks to my mentor Rohit for guidance and feedback.
+- A huge thanks for tutor Gemma for assisting me with the final heroku upload
 
 
 
