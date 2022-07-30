@@ -84,10 +84,10 @@ The main feature of this website is the booking functions. As the goal of this w
 
 ### Testing User Stories
 - [Register Account](https://github.com/simonmortensen23/table-booking/projects/1#card-84321005)
---**Acceptance Criteria**: A user should be able to register for an account and have an option to go to login page if they already have an account. The registration form should indicate clearly what fields are required by showing a message on the field if it is not filled out. The required fields are Email-adress, Username and Password. When entering email-adress it autofills username but can be edited if user prefers unique username. 
+       - **Acceptance Criteria**: A user should be able to register for an account and have an option to go to login page if they already have an account. The registration form should indicate clearly what fields are required by showing a message on the field if it is not filled out. The required fields are Email-adress, Username and Password. When entering email-adress it autofills username but can be edited if user prefers unique username. 
 There are also restriction on duplicate email adress and password. If a user is already registered in the database with a given email, the registration will not be accepted and the user will be shown an error message that explains the issue. The password must be atleast 8 characters and cannot only contain either numbers or letters.
---**Summary**: Form is easy to use, and has warning messages for required fields. Other warning messages also clearly explains the users issue.
---**Outcome**: Pass
+       - **Summary**: Form is easy to use, and has warning messages for required fields. Other warning messages also clearly explains the users issue.
+       - **Outcome**: Pass
 
 - [Make Booking](https://github.com/simonmortensen23/table-booking/projects/1#card-84321014) 
 **Acceptance Criteria**: A user should be able make a booking and choose what day and time and how big the company of people are. The booking form should indicate clearly what fields are required by showing a warning message on the field if it is not filled out. The required fields are Customer, People, Phone Number, Booking Date, Booking Time. The form has a few restrictions of past dates and a unique_together combination of user, customer, booking date and booking time. If any of those criterias are met the user will be shown an error message that explains the issue.
