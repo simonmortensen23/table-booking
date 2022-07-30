@@ -3,7 +3,7 @@
 This is a table booking service for the restaurant, Feed Me. It is designed to be responsive on both PC, Tablet and Mobilephone, making it easy to navigate for visitors and users.
 
 ## Table of Contents
-<project URL#<introduction>
+[Introduction](#introduction)
 
 ## Introduction
 Feed Me - Table Booking Service is a restaurant booking website. First time users will be able to access the home page and menu page, and upon user registration they will be able to make bookings, view bookings and edit and delete specific bookings. 
