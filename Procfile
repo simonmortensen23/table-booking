@@ -1,1 +1,0 @@
-web: gunicorn tablebooking.wsgi
